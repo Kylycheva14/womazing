@@ -1,0 +1,84 @@
+.new{
+    &__content{
+        margin-top: 150px 10px 0 10px;
+        
+    }
+    &__items{
+        @include flex(center, space-between, wrap);
+    }
+    &__title{
+        padding-top: 100px;
+        @include font(500, 40px, $black);
+    }
+    &__name{
+        @include font(500, 20px, $black);
+        text-align: center;
+    }
+    &__price{
+        @include font(500, 15px, #998E78);
+        text-align: center;
+    }
+    &__price--line{
+        text-decoration: line-through;
+    }
+    &__btn{
+        margin-top: 80px;
+        display: block;
+        margin: 0 auto;
+        padding: 22px 50px;
+        border: 1px solid #6E9C9F;
+        background: none;
+        @include font(400, 17px, #6E9C9F);
+        cursor: pointer;
+    }
+    &__btn:hover{
+        background: #6E9C9F;
+        @include font(400, 17px, $white);
+    }
+}
+@media screen and (max-width: 1100px){
+    .new{
+        &__img{
+            width: 300px;
+            height: 400px;
+        }
+    }
+}
+@media screen and (max-width: 920px){
+    .new{
+        &__img{
+            width: 250px;
+            height: 350px;
+        }
+    }
+}
+@media screen and (max-width: 780px){
+    .new{
+        &__img{
+            width: 220px;
+            height: 320px;
+        }
+    }
+}
+@media screen and (max-width: 690px){
+    .new{
+        &__img{
+            width: 450px;
+            height: 550px;
+        }
+        &__items{
+            @include flex(center, center, wrap);
+        }
+        &__title{
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .new{
+        &__img{
+            width: 315px;
+            height: 450px;
+        }
+    }
+}

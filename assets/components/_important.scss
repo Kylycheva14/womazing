@@ -1,0 +1,48 @@
+.important{
+    &__content{
+        margin-top: 120px;
+        padding: 10px;
+    }
+    &__title{
+        @include font(500, 40px, $black);
+    }
+    &__items{
+        padding-top: 92px;
+        @include flex(center, space-between, wrap);
+    }
+    &__name{
+        @include font(500, 25px, $black);
+    }
+    &__description{
+        @include font(500, 17px, $black);
+        width: 305px;
+        line-height: 140%;
+    }
+}
+@media screen and (max-width: 940px){
+    .important{
+        &__items{
+            padding-top: 22px;
+        }
+        &__title{
+            text-align: center;
+        }
+        &__items{
+            display: block;
+            text-align: center;
+         }
+         &__description{
+           width: 600px;
+           margin: 0 auto;
+          padding-bottom: 40px;
+        }
+    }
+}
+@media screen and (max-width: 650px){
+    .important{
+         &__description{
+           width: 100%;
+           margin: 0 auto;
+        }
+    }
+}

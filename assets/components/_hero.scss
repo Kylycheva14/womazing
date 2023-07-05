@@ -1,0 +1,147 @@
+.hero{
+    padding-top: 45px;
+    &__content{
+        @include flex(center, space-between, wrap);
+    }
+    &__title{
+        @include font(500, 55px, $black);
+        max-width: 570px;
+        padding: 10px
+    }
+    &__description{
+        @include font(400, 20px, $black);
+        text-align: end;
+        max-width: 385px;
+        padding: 10px
+    }
+    &__item{
+        @include flex(center, center, nowrap);
+        cursor: pointer;
+    }
+    &__btn{
+        padding: 22px 50px;
+        background: $light-blue;
+        border: none;
+        @include font(400, 17px, $white);
+        cursor: pointer;
+    }
+    &__btn:hover{
+        background:#509498;
+    }
+    &__img--btn{
+        padding: 17px 26px;
+        background: rgba(110, 156, 159, 0.1);
+    }
+    &__right{
+        position: relative;
+    }
+    &__img2{
+        position: absolute;
+        top: 20%;
+        right: -25%;
+    }
+    &__img3{
+        position: absolute;
+        bottom: -10%;
+        left: -33%;
+    }
+ 
+}
+@media screen and (max-width: 1110px){
+    .hero{
+        &__img{
+            max-width: 350px;
+            height: 550px;
+        }
+        &__img2{
+            position: absolute;
+            top: 35%;
+            right: -5%;
+        }
+        &__img3{
+            position: absolute;
+            bottom: -2%;
+            left: -33%;
+        }
+    }
+}
+@media screen and (max-width: 950px){
+    .hero{
+        &__img{
+            max-width: 300px;
+            height: 500px;
+        }
+        &__img2{
+            width:150px ;
+            top: 35%;
+            right: -2%;
+        }
+        &__img3{
+            width: 150px;
+            position: absolute;
+            bottom: -10%;
+            left: -33%;
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    .hero{
+        &__title{
+            max-width: 450px;
+            @include font(500, 45px, $black);
+        }
+        &__description{
+            @include font(400, 18px, $black);
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .hero{
+        &__img{
+            max-width: 400px;
+            height: 550px;
+        }
+        &__img2{
+            width:200px ;
+            top: 20%;
+            right: -25%;
+        }
+        &__img3{
+            width: 200px;
+            bottom: -10%;
+            left: -33%;
+        }
+        &__right{
+            display: block;
+            margin: 15px auto;
+        }
+        &__title{
+            max-width: 550px;
+            text-align: center;
+        }
+        &__description{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 610px){
+    .hero{
+        &__img{
+            max-width: 300px;
+            height: 500px;
+        }
+        &__img2{
+            width:150px ;
+            top: 35%;
+            right: -2%;
+        }
+        &__img3{
+            width: 150px;
+            position: absolute;
+            bottom: -10%;
+            left: -3%;
+        }
+    }
+}

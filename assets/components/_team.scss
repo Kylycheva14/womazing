@@ -1,0 +1,75 @@
+.team{
+    &__content{
+        margin-top: 120px;
+        padding: 10px;
+        padding-bottom: 80px;
+    }
+    &__title{
+        @include font(500, 40px, $black);
+    }
+    &__items{
+        padding-top: 82px;
+        @include flex(center, space-between, wrap);
+    }
+    &__name{
+        @include font(500, 25px, $black);
+    }
+    &__description{
+        @include font(500, 17px, $black);
+        width: 255px;
+    }
+    &___link{
+        @include font(500, 17px, $light-blue);
+        text-decoration: none;
+    }
+    &___link:hover{
+        border-bottom: 1px solid $light-blue;
+    }
+}
+@media screen and (max-width: 1015px){
+    .team{
+        &__img{
+            width: 600px;
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    .team{
+        &__img{
+            width: 500px; 
+            padding-left: 30px;
+        } 
+        &__title{
+        text-align: center;
+        }
+       &__right{
+        padding-left: 20px;
+       }
+    }
+   
+}
+@media screen and (max-width: 560px){
+    .team{
+        &__img{
+            width: 350px; 
+        } 
+        &__items{
+            padding-top: 10px;
+        }
+    }
+   
+}
+@media screen and (max-width: 400px){
+    .team{
+        &__img{
+            width: 300px; 
+        } 
+        &__img{
+            padding-left: 10px;
+        } 
+        &__right{
+            padding-left: 10px;
+        }
+    }
+   
+}

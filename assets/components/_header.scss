@@ -1,0 +1,157 @@
+.header{
+    &__content{
+        @include flex(center, space-between, wrap);
+    }
+    &__item{
+        @include flex(center, space-between, wrap);
+       
+    }
+    &__logo{
+        @include flex(center, space-between, wrap);
+    }
+    &__contacts{
+        @include flex(center, space-between, wrap);
+    }
+    &__logo--name{
+         @include font(500, 16px, $black);
+         padding-left: 15px;
+         text-transform: uppercase;
+    }
+    &__link{
+        @include font(500, 15px, $black);
+        text-decoration: none;
+    }
+    &__link:hover{
+        @include font(500, 15px, $light-blue);
+    }
+    &__list{
+        padding-left: 45px;
+    }
+    &__contacts--description{
+        @include font(400, 15px, $black); 
+    }
+    &__contacts--logo{
+        padding: 10px;
+    
+    }
+    &__contacts--logo:hover{
+        padding: 10px;
+        background: hsl(185, 63%, 64%);
+        
+    }
+    &__burger--btn{
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: none;
+       
+    }
+    &__busket{
+        z-index: 2;
+    }
+    &__burger--btn span {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: $black;
+        left: 5px;
+        transition: transform .5s, opacity .5s, background-color .5s;
+    }
+    &__burger--btn span:nth-child(1){
+        transform: translateY(-10px);
+    }
+    &__burger--btn span:nth-child(3){
+        transform: translateY(10px);
+    }
+    .header.open &__burger--btn span:nth-child(1){
+        transform: translateY(0)  rotate(45deg);
+    }
+    .header.open &__burger--btn span:nth-child(2){
+        opacity: 0;
+    }
+    .header.open &__burger--btn span:nth-child(3){
+        transform: translateY(0) rotate(-45deg);
+    }
+    .header.open &__burger--btn span{
+        background: #fff;
+    }
+    &__burger--items{
+        position: relative;
+    }
+    &__burger--item{
+        background: hsl(185, 100%, 15%);
+        position: absolute;
+        top: -245px;
+        right:0px;
+        margin: 0 auto;
+        opacity: 1;
+        padding: 55px 20px 20px 20px;
+        display: none;
+        width: 150px;
+        text-align: center;
+        transition: transform .5s,
+    }
+    &__burger--link{
+        @include font(600, 18px, #fff);
+        text-decoration: none;
+        z-index: 2;
+       
+    }
+    &__burger--list{
+        padding: 10px;
+    }
+    .header.open &__burger--item{
+        transform: translateY(100%);
+    }
+
+}
+@media screen and (max-width: 830px) {
+    .header{
+        &__list{
+            padding-left: 30px;
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .header{
+        &__list{
+            padding-left: 20px;
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .header{
+        &__item{
+            display: none;
+        }
+        &__burger--btn{
+            display: block;
+            z-index: 2;
+        }
+        &__burger--item{
+            display: block;
+            
+        }
+        &__img--icon{
+            padding-left: 5px;
+        }
+    }
+}
+@media screen and (max-width: 355px) {
+    .header{
+        &__logo--name{
+            padding-left: 5px;
+        }
+        &__contacts--logo{
+        padding: 5px;
+        }
+        &__contacts--logo:hover{
+            padding: 5px; 
+        }
+        &__contacts--description{
+            @include font(400, 12px, $black); 
+        }
+    }
+}
